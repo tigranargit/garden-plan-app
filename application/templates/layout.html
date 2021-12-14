@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Garden Planning App</title>
+    </head>
+    <body>
+        <h1>My garden</h1>
+        {% block body %}
+        {% endblock body %}
+        <br>
+        <br>
+        <a href="{{ url_for('add_beds') }}"> Add a new bed </a>
+        <br>
+        <br>
+        <p>Added at least one bed? If yes, click below to add some plants, if not, click the link above to add a bed:</p>
+        <br>
+        <a href="{{ url_for('add_plants') }}"> Add a new plant</a>
+        <br>
+        <br>
+        <a href="{{ url_for('view_garden') }}"> View my garden</a>
+    </body>
+</html>

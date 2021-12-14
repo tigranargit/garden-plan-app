@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2>Beds in my garden</h2>
+<table>
+    <tr>
+        <th>Bed No.</th>
+        <th>Name</th>
+        <th>Length(cm)</th>
+        <th>Width(cm)</th>
+        <th>Aspect</th>
+        <th>Plants</th>
+    </tr>
+    {% for bed in beds %}
+    <tr>
+        <td> {{ bed.id }} </td>
+        <td> {{ bed.name }} </td>
+        <td> {{ bed.length }} </td>
+        <td> {{ bed.width }} </td>
+        <td> {{ bed.aspect }} </td>
+        for i in range(len(bed.plants))
+        
+        <td> {{ bed.plants}} </td>
+        <td><a href="{{ url_for('deletebed', id=bed.id) }}"> delete </a></td>
+    </tr>
+    {% endfor %}
+</table>
+<br>
+<br>
+<h2>Plants in my garden</h2>
+<table>
+    <tr>
+        <th>Plant No.</th>
+        <th>Name</th>
+        <th>Bed No</th>
+    </tr>
+    {% for plant in plants %}
+    <tr>
+        <td> {{ plant.id }}</td>
+        <td> {{ plant.name }}</td>
+        <td> {{ plant.plantbed }}</td>
+        <td><a href="{{ url_for('deleteplant', id=plant.id) }}"> delete </a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body %}

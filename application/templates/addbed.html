@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2> Add a new bed</h2>
+<div class='form'>
+    <form method='POST' action=''>
+        {{ form.hidden_tag() }}
+        {{ form.bed_name.label }} {{ form.bed_name}}
+        <br>
+        {{ form.bed_length.label }} {{ form.bed_length}}
+        <br>
+        {{ form.bed_width.label }} {{ form.bed_width}}
+        <br>
+        {{ form.bed_aspect.label }} {{ form.bed_aspect}}
+        <br>
+        {{ form.submit }}
+        <br>
+    </form>
+</div>
+{% endblock body %}
