@@ -8,7 +8,6 @@
         <th>Length(cm)</th>
         <th>Width(cm)</th>
         <th>Aspect</th>
-        <th>Plants</th>
     </tr>
     {% for bed in beds %}
     <tr>
@@ -17,9 +16,6 @@
         <td> {{ bed.length }} </td>
         <td> {{ bed.width }} </td>
         <td> {{ bed.aspect }} </td>
-        for i in range(len(bed.plants))
-        
-        <td> {{ bed.plants}} </td>
         <td><a href="{{ url_for('deletebed', id=bed.id) }}"> delete </a></td>
     </tr>
     {% endfor %}
